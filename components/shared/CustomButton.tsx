@@ -4,7 +4,7 @@ import { ButtonProps } from "@/types/types"; // Ensure the path is correct
 
 const CustomButton = ({
   onPress,
-  title = "Click me",
+  title = "Click me", 
   extraClass,
   extraTextClass,
   IconLeft,

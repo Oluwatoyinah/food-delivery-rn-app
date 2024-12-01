@@ -1,10 +1,10 @@
 import AuthPageLayout from "@/components/shared/AuthPageLayout";
 import CustomButton from "@/components/shared/CustomButton";
 import CustomInput from "@/components/shared/CustomInput";
-import { images } from "@/constants";
+import CustomPasswordInput from "@/components/shared/CustomPasswordInput";
 import { Link, router } from "expo-router";
 import React from "react";
-import { Image, ScrollView, Text, View } from "react-native";
+import { Text, View } from "react-native";
 
 const Login = () => {
   return (
@@ -14,18 +14,18 @@ const Login = () => {
     >
       <View className="mb-4">
         <CustomInput
-          label="Email"
+          label="Email Address"
           placeholder="Enter your email address"
           inputStyle="bg-[#F0F5FA] border-[#F0F5FA] py-4 text-[18px]"
-          labelStyle="text-[#32343E] uppercase text-[14px]"
+          labelStyle="text-[#32343E] text-[14px]"
         />
       </View>
       <View className="mb-4">
-        <CustomInput
+        <CustomPasswordInput
           label="Password"
           placeholder="Enter your password"
           inputStyle="bg-[#F0F5FA] border-[#F0F5FA] py-4 text-[18px]"
-          labelStyle="text-[#32343E] uppercase text-[14px]"
+          labelStyle="text-[#32343E] text-[14px]"
         />
       </View>
 

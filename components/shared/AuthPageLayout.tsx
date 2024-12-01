@@ -1,7 +1,4 @@
-import CustomButton from "@/components/shared/CustomButton";
-import CustomInput from "@/components/shared/CustomInput";
 import { images } from "@/constants";
-import { Link, router } from "expo-router";
 import React, { ReactNode } from "react";
 import {
   Image,
@@ -16,15 +13,13 @@ import {
 
 const ios = Platform.OS == "ios";
 
-const AuthPageLayout = ({
-  children,
-  title,
-  headerText,
-}: {
+interface AuthPageProps {
   children: ReactNode;
   title: string;
   headerText: string;
-}) => {
+}
+
+const AuthPageLayout = ({ children, title, headerText }: AuthPageProps) => {
   return (
     <>
       <KeyboardAvoidingView
@@ -38,7 +33,7 @@ const AuthPageLayout = ({
           >
             <View className="relative bg-[#121223]  h-[300px] flex justify-center px-8 flex-row items-end py-10">
               <View className="mt-5">
-                <Text className="text-white font-SenSemiBold text-3xl -tracking-[1px] text-center">
+                <Text className="text-white font-SenSemiBold text-4xl -tracking-[2px] text-center">
                   {title}
                 </Text>
                 <Text className="text-[#646982] font-SenRegular text-[18px] mt-3 text-center">
@@ -50,7 +45,7 @@ const AuthPageLayout = ({
                 source={images.AuthBanner}
               />
             </View>
-            <View className="p-5 py-8 bg-white flex-1 rounded-t-[20px]">
+            <View className="p-5 py-8 bg-white flex-1 rounded-t-[10px]">
               {children}
             </View>
           </ScrollView>

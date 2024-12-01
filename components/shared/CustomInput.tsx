@@ -7,6 +7,7 @@ const CustomInput = ({
   labelStyle,
   placeholder,
   inputStyle,
+  inputType = "default",
 }: CustomInputProps) => {
   return (
     <View>
@@ -15,8 +16,10 @@ const CustomInput = ({
       </Text>
       <View>
         <TextInput
-          className={`p-2 px-3 border rounded  font-SenRegular ${inputStyle}`}
-          placeholder={placeholder}
+          className={`p-2 px-3 border rounded-full  font-SenRegular ${inputStyle}`}
+          // placeholder={placeholder}
+          placeholder="Hello"
+          keyboardType={inputType}
         />
       </View>
     </View>
